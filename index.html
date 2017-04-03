@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CRUD med fetch</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!-- Modal -->
+<div id="albumFormModal" class="modal fade">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Uppdatera Album</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+			<div class="container-fluid">
+				<div id="albumForm">
+					<form>
+						<div class="form-group">
+							<label for="albumArtist">Artist</label>
+							<input type="text" class="form-control" id="albumArtist">
+						</div>
+						<div class="form-group">
+							<label for="albumTitle">Titel</label>
+							<input type="text" class="form-control" id="albumTitle">
+						</div>
+						<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="albumYear">År</label>
+							<input type="year" class="form-control" id="albumYear">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="albumGenre">Genre</label>
+							<input type="text" class="form-control" id="albumGenre">
+						</div>
+						</div>
+						<div class="form-group">
+							<label for="albumCover">Omslag</label>
+							<input type="url" class="form-control" id="albumCover" aria-describedby="albumCoverHelp">
+							<small id="albumCoverHelp" class="form-text text-muted">Ange en url till albumomslaget.</small>
+						</div>
+						<div class="form-group">
+							<label for="albumDescription">Beskrivning</label>
+							<textarea class="form-control" id="albumDescription" rows="3"></textarea>
+						</div>
+						<button id="albumFormSubmit" type="submit" class="btn btn-primary">Skicka</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<!-- / Modal -->
+
+	<div class="container-fluid py-5">
+		<header class="page-header mb-3">
+			<h1 class="display-5">CRUD med fetch <small class="text-muted">Create Read Update Delete</small></h1>
+		</header>
+		<div class="row">
+			<div class="col-sm-12 mb-3">
+				<a id="getAlbums" class="btn btn-primary" href="#">Hämta Album från API</a>		
+				<a id="addAlbum" class="btn btn-success" href="#">Posta nytt Album</a>	
+			</div>
+			<div class="col-sm-12">
+				<div id="albumContainer">
+					<h2>Album</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery first, then Tether, then Bootstrap JS. -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<!-- <script src="js/main.js"></script> -->
+	<script src="js/fetch.js"></script>
+</body>
+</html>
